@@ -14,4 +14,8 @@
         <button type="submit">Найти</button>
     </form>
 
+    {% for object in title_objects %}
+        <a href="portal-character/{{ object.id }}">{{object.title}}</a> <br>
+    {% endfor %}
+
 {% endblock %}
