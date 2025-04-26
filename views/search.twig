@@ -2,14 +2,16 @@
 
 {% block content %}
 
-    Поиск
+    <h1>Поиск</h1>
 
     <form action="">
         <select name="type">
+            <option value="">Все</option>
             <option value="Робот">Робот</option>
             <option value="Человек">Человек</option>
         </select>
         <label>Название <input type="text" name="title"></label>
+        <label>Описание <input type="text" name="info"></label>
 
         <button type="submit">Найти</button>
     </form>
