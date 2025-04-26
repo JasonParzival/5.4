@@ -6,6 +6,7 @@
 
     require_once "../controllers/Controller404.php";
     require_once "../controllers/ObjectController.php";
+    require_once "../controllers/SearchController.php";
 
     $loader = new \Twig\Loader\FilesystemLoader('../views');
     $twig = new \Twig\Environment($loader, [
@@ -21,6 +22,7 @@
     $router->add("/", MainController::class);
 
     $router->add("/portal-character/(?P<id>\d+)", ObjectController::class); 
+    $router->add("/search", SearchController::class);
 
     $router->get_or_default(Controller404::class);
 ?>
